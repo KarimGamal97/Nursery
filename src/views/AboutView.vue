@@ -2,7 +2,7 @@
   <div>
     <nav-bar></nav-bar>
     <div class="about-header">
-      <v-container--fluid class="grey lighten-5">
+      <v-container class="grey lighten-5">
         <v-row>
           <v-col cols="12" sm="6" md="6">
             <v-img
@@ -12,23 +12,22 @@
             ></v-img>
           </v-col>
           <v-col cols="6" md="6">
-            <h1 class="heading">We will take care of your kids</h1>
+            <h1 class="heading">سوف نعتني بأطفالك وننميهم في بيئة جيدة</h1>
             <p class="desc">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut lab dolore magna aliqua. Ut enim ad
-              minim.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut lab dolore magna aliqua. Ut
-              enim ad minim.
+              وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو
+              لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات
             </p>
             <v-btn class="learn-more" depressed color="primary">
-              Learn More..
+              المزيد ..
             </v-btn>
           </v-col>
         </v-row>
-      </v-container--fluid>
+      </v-container>
     </div>
     <div class="our-team">
-      <h1 class="head-team">Our Team</h1>
+      <h1 class="head-team">فريقنا</h1>
       <v-container>
         <v-row>
           <!-- Start Card -->
@@ -39,29 +38,16 @@
                 style="background-size: contain"
                 height="250px"
               ></v-img>
-              <v-card-title> Jenifer Lopez </v-card-title>
-              <v-card-subtitle> +5 years exp. in educating </v-card-subtitle>
+              <v-card-title style="font-weight: bold">سهي محمد</v-card-title>
+              <v-card-subtitle>
+                +5 سنوات من الخبرة في التدريس و معاملة الطفل
+              </v-card-subtitle>
               <v-card-actions>
-                <v-btn color="orange lighten-2" text> More Info </v-btn>
                 <v-spacer></v-spacer>
-                <v-btn icon @click="show = !show">
-                  <v-icon>{{
-                    show ? "mdi-chevron-up" : "mdi-chevron-down"
-                  }}</v-icon>
+                <v-btn color="orange lighten-2" depressed text>
+                  المزيد..
                 </v-btn>
               </v-card-actions>
-              <v-expand-transition>
-                <div v-show="show">
-                  <v-divider></v-divider>
-                  <v-card-text>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quis eaque placeat odit nobis molestias ipsum possimus
-                    aperiam consequatur obcaecati ullam molestiae maxime
-                    nostrum, excepturi qui earum impedit doloribus beatae.
-                    Laudantium.
-                  </v-card-text>
-                </div>
-              </v-expand-transition>
             </v-card>
           </v-col>
           <!-- End Card -->
@@ -73,30 +59,16 @@
                 style="background-size: contain"
                 height="250px"
               ></v-img>
-              <v-card-title> UnderTaker </v-card-title>
-              <v-card-subtitle> +20 years exp </v-card-subtitle>
+              <v-card-title style="font-weight: bold"> أحمد جمال </v-card-title>
+              <v-card-subtitle
+                >+2 سنوات من الخبرة في السيكولوجي</v-card-subtitle
+              >
               <v-card-actions>
-                <v-btn color="orange lighten-2" text> More Info </v-btn>
                 <v-spacer></v-spacer>
-                <v-btn icon @click="show = !show">
-                  <v-icon>{{
-                    show ? "mdi-chevron-up" : "mdi-chevron-down"
-                  }}</v-icon>
+                <v-btn color="orange lighten-2" depressed text>
+                  المزيد..
                 </v-btn>
               </v-card-actions>
-              <v-expand-transition>
-                <div v-show="show">
-                  <v-divider></v-divider>
-                  <v-card-text>
-                    I'm a thing. But, like most politicians, he promised more
-                    than he could deliver. You won't have time for sleeping,
-                    soldier, not with all the bed making you'll be doing. Then
-                    we'll go with that data file! Hey, you add a one and two
-                    zeros to that or we walk! You're going to do his laundry?
-                    I've got to find a way to escape.
-                  </v-card-text>
-                </div>
-              </v-expand-transition>
             </v-card>
           </v-col>
           <!-- End Card -->
@@ -108,30 +80,18 @@
                 style="background-size: contain"
                 height="250px"
               ></v-img>
-              <v-card-title> Jhon Cena</v-card-title>
-              <v-card-subtitle> +12 years of exp. </v-card-subtitle>
+              <v-card-title style="font-weight: bold"
+                >عبدالله شريف</v-card-title
+              >
+              <v-card-subtitle
+                >+4 سنوات من الخبرة في تنمية مهارات الطفل
+              </v-card-subtitle>
               <v-card-actions>
-                <v-btn color="orange lighten-2" text> More Info </v-btn>
                 <v-spacer></v-spacer>
-                <v-btn icon @click="show = !show">
-                  <v-icon>{{
-                    show ? "mdi-chevron-up" : "mdi-chevron-down"
-                  }}</v-icon>
+                <v-btn color="orange lighten-2" depressed text>
+                  المزيد..
                 </v-btn>
               </v-card-actions>
-              <v-expand-transition>
-                <div v-show="show">
-                  <v-divider></v-divider>
-                  <v-card-text>
-                    I'm a thing. But, like most politicians, he promised more
-                    than he could deliver. You won't have time for sleeping,
-                    soldier, not with all the bed making you'll be doing. Then
-                    we'll go with that data file! Hey, you add a one and two
-                    zeros to that or we walk! You're going to do his laundry?
-                    I've got to find a way to escape.
-                  </v-card-text>
-                </div>
-              </v-expand-transition>
             </v-card>
           </v-col>
           <!-- End Card -->
@@ -143,30 +103,16 @@
                 style="background-size: contain"
                 height="250px"
               ></v-img>
-              <v-card-title> Nadia ElGendi </v-card-title>
-              <v-card-subtitle> +25 of exp. </v-card-subtitle>
+              <v-card-title style="font-weight: bold">اسراء حسن</v-card-title>
+              <v-card-subtitle
+                >+3 سنوات من الخبرة في تدريب الطفل
+              </v-card-subtitle>
               <v-card-actions>
-                <v-btn color="orange lighten-2" text> More Info </v-btn>
                 <v-spacer></v-spacer>
-                <v-btn icon @click="show = !show">
-                  <v-icon>{{
-                    show ? "mdi-chevron-up" : "mdi-chevron-down"
-                  }}</v-icon>
+                <v-btn color="orange lighten-2" depressed text>
+                  المزيد..
                 </v-btn>
               </v-card-actions>
-              <v-expand-transition>
-                <div v-show="show">
-                  <v-divider></v-divider>
-                  <v-card-text>
-                    I'm a thing. But, like most politicians, he promised more
-                    than he could deliver. You won't have time for sleeping,
-                    soldier, not with all the bed making you'll be doing. Then
-                    we'll go with that data file! Hey, you add a one and two
-                    zeros to that or we walk! You're going to do his laundry?
-                    I've got to find a way to escape.
-                  </v-card-text>
-                </div>
-              </v-expand-transition>
             </v-card>
           </v-col>
           <!-- End Card -->

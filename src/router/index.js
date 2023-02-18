@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ContactView from "../views/ContactView.vue";
+import InstructionsView from "../views/InstructionsView.vue";
+import FaqView from "../views/FaqView.vue";
 
 Vue.use(VueRouter);
 
@@ -18,9 +20,19 @@ const routes = [
     component: AboutView,
   },
   {
+    path: "/instructions",
+    name: "instructions",
+    component: InstructionsView,
+  },
+  {
     path: "/contact",
     name: "contact",
     component: ContactView,
+  },
+  {
+    path: "/faq",
+    name: "faq",
+    component: FaqView,
   },
 ];
 

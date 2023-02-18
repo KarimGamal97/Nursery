@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <nav-bar></nav-bar>
-    <v-carousel hide-delimiters>
+    <v-carousel style="height: 60vh" hide-delimiters>
       <v-carousel-item
         v-for="(item, i) in items"
         :key="i"
@@ -15,16 +15,18 @@
         </v-col>
         <v-col cols="12" lg="6" sm="12" md="6">
           <div class="box">
-            <h2>Child Nurrsery</h2>
+            <h2>علم طفلك</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
-              commodi, quia veniam quae dolores laboriosam repellendus omnis
-              ipsum quisquam. Harum commodi facilis sit dolorum sed. Lorem
-              ipsum, dolor sit amet consectetur adipisicing elit. Nemo commodi,
-              quia veniam quae dolores laboriosam repellendus omnis ipsum
-              quisquam. Harum commodi facilis sit dolorum sed.
+              "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+              يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو
+              لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات . ديواس أيوتي
+              أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي كايلليوم
+              دولار أيو فيجايت نيولا باراياتيور. أيكسسيبتيور ساينت أوككايكات
+              كيوبايداتات نون بروايدينت ,سيونت ان كيولبا كيو أوفيسيا
+              ديسيريونتموليت انيم أيدي ايست لابوريوم."
             </p>
-            <button>Read More ...</button>
+            <button>المزيد ..</button>
           </div>
         </v-col>
       </v-row>
