@@ -7,7 +7,7 @@
           <div>
             <v-col cols="12" md="12">
               <v-text-field
-                v-model="email"
+                v-model="Form.email"
                 :rules="emailRules"
                 placeholder="الايميل"
                 required
@@ -16,7 +16,7 @@
             </v-col>
             <v-col cols="12" md="12">
               <v-text-field
-                v-model="password"
+                v-model="Form.password"
                 :rules="passRules"
                 placeholder="كلمة المرور"
                 required
