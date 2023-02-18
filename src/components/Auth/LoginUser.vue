@@ -34,6 +34,7 @@
   </div>
 </template>
 <script>
+import http from "@/axios"
 export default {
   data: () => ({
     valid: false,
