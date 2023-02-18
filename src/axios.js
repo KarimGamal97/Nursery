@@ -1,12 +1,6 @@
 import axios from "axios";
 import router from "@/router";
-// axios.defaults.baseURL = "http://localhost/Mandobk-BE/public/v1/";
 
-// set header
-
-// axios.defaults.headers = {Accept: "application/vnd.api+json", withCredentials: true ,"Content-Type": "application/vnd.api+json"};
-
-// axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token')
 const domain = "http://127.0.0.1:8000/api/";
 const http = axios.create({
     baseURL: domain,

@@ -3,12 +3,17 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ContactView from "../views/ContactView.vue";
+<<<<<<< HEAD
 import InstructionsView from "../views/InstructionsView.vue";
 import FaqView from "../views/FaqView.vue";
 
+=======
+import LoginView from '@/views/LoginView'
+>>>>>>> 6997a016a8304bba64b66289d3a7e8bb05035019
 Vue.use(VueRouter);
 
 const routes = [
+  
   {
     path: "/",
     name: "home",
@@ -30,9 +35,15 @@ const routes = [
     component: ContactView,
   },
   {
+<<<<<<< HEAD
     path: "/faq",
     name: "faq",
     component: FaqView,
+=======
+    path: "/login",
+    name: "login",
+    component: LoginView,
+>>>>>>> 6997a016a8304bba64b66289d3a7e8bb05035019
   },
 ];
 
