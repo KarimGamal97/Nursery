@@ -15,3 +15,9 @@ export default {
   data: () => ({}),
 };
 </script>
+
+<style>
+* {
+  direction: rtl;
+}
+</style>
