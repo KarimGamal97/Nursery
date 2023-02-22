@@ -96,7 +96,9 @@ export default {
   padding: 5%;
 }
 .contact-img {
-  max-width: 100%;
+  max-width: 60%;
+  display: block;
+  margin: auto;
   min-height: 50%;
 }
 </style>

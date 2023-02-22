@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <nav-bar></nav-bar>
-    <v-carousel style="height: 60vh" hide-delimiters>
+    <v-carousel style="height: 40vh" hide-delimiters>
       <v-carousel-item
         v-for="(item, i) in items"
         :key="i"
@@ -11,7 +11,7 @@
     <v-container class="grey lighten-5">
       <v-row>
         <v-col cols="12" lg="6" sm="12" md="6">
-          <video controls src="../assets/MVI_5540.mp4"></video>
+          <img src="../assets/Depositphotos_12359307_original.jpg" />
         </v-col>
         <v-col cols="12" lg="6" sm="12" md="6">
           <div class="box">
@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-video {
+img {
   max-width: 100%;
 }
 .box {

@@ -42,7 +42,9 @@ export default {
   margin-bottom: 15px;
 }
 .contact-img {
-  max-width: 100%;
+  max-width: 60%;
   min-height: 50%;
+  margin: auto;
+  display: block;
 }
 </style>
