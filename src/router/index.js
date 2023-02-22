@@ -6,6 +6,7 @@ import ContactView from "../views/ContactView.vue";
 import InstructionsView from "../views/InstructionsView.vue";
 import FaqView from "../views/FaqView.vue";
 import LoginView from "@/views/LoginView";
+import ProfileView from "@/views/ProfileView.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -38,6 +39,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: LoginView,
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: ProfileView,
   },
 ];
 

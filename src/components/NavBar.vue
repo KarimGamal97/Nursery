@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar color="deep-purple accent-4" dense dark>
+    <v-app-bar color="accent-4" style="background-color: #0d6efd" dense dark>
       <v-toolbar-title>
         <router-link
           style="
@@ -38,7 +38,7 @@
               class="mx-2"
               fab
               small
-              color="indigo"
+              style="background-color: #0d6efd"
               dark
               v-bind="attrs"
               v-on="on"
@@ -47,7 +47,11 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item v-for="(item, index) in items" :key="index">
+            <v-list-item
+              v-for="(item, index) in items"
+              :key="index"
+              :to="item.path"
+            >
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -62,7 +66,10 @@ export default {
   name: "NavBar",
   data() {
     return {
-      items: [{ title: "تسجيل الخروج" }],
+      items: [
+        { title: "بروفايل", path: "/profile" },
+        { title: "تسجيل الخروج" },
+      ],
     };
   },
 };

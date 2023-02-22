@@ -50,8 +50,10 @@ export default {
 
 <style scoped>
 .instructions-img {
-  max-width: 100%;
+  max-width: 60%;
   min-height: 50%;
+  margin: auto;
+  display: block;
 }
 
 .contact-head {

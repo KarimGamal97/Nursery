@@ -1,13 +1,13 @@
 <template>
   <div style="margin: 200px auto">
     <h2 class="text-center">تسجيل الدخول</h2>
-    <v-form @submit.prevent="submit" v-model="valid">
+    <v-form @submit.prevent="submitLogin" v-model="valid">
       <v-container>
         <v-row>
           <div>
             <v-col cols="12" md="12">
               <v-text-field
-                v-model="email"
+                v-model="Form.email"
                 :rules="emailRules"
                 placeholder="الايميل"
                 required
@@ -16,7 +16,7 @@
             </v-col>
             <v-col cols="12" md="12">
               <v-text-field
-                v-model="password"
+                v-model="Form.password"
                 :rules="passRules"
                 placeholder="كلمة المرور"
                 required
@@ -34,12 +34,12 @@
   </div>
 </template>
 <script>
-import http from "@/axios"
+import http from "@/axios";
 export default {
   data: () => ({
     valid: false,
     Form: {
-      firstname: "",
+      email: "",
       password: "",
     },
     passRules: [
@@ -53,7 +53,7 @@ export default {
     ],
   }),
   methods: {
-    async submit() {
+    async submitLogin() {
       try {
         await http.post("user/login", this.Form).then((response) => {
           localStorage.setItem("token", response.data.data.token);
