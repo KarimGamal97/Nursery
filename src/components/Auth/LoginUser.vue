@@ -1,7 +1,7 @@
 <template>
   <div style="margin: 200px auto">
     <h2 class="text-center">تسجيل الدخول</h2>
-    <v-form @submit.prevent="submit" v-model="valid">
+    <v-form @submit.prevent="submitLogin" v-model="valid">
       <v-container>
         <v-row>
           <div>
@@ -34,12 +34,12 @@
   </div>
 </template>
 <script>
-import http from "@/axios"
+import http from "@/axios";
 export default {
   data: () => ({
     valid: false,
     Form: {
-      firstname: "",
+      email: "",
       password: "",
     },
     passRules: [
@@ -53,10 +53,10 @@ export default {
     ],
   }),
   methods: {
-    async submit() {
+    async submitLogin() {
       try {
         await http.post("user/login", this.Form).then((response) => {
-          localStorage.setItem("token", response.data.data.token);
+          localStorage.setItem("token", response.data.data.token)
           localStorage.setItem("info", JSON.stringify(response.data.data));
           localStorage.setItem("loggedIn", "true");
           this.$router.push({ name: "/" });
