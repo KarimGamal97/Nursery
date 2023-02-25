@@ -22,10 +22,13 @@
                 required
                 outlined
               ></v-text-field>
+              <p>{{ userError }}</p>
             </v-col>
-
             <v-col>
-              <button>تسجيل الدخول</button>
+              <div class="d-flex justify-content-between">
+                <button>تسجيل الدخول</button>
+                <router-link to="/SignUpForm">انشاء حساب جديد</router-link>
+              </div>
             </v-col>
           </div>
         </v-row>
@@ -42,6 +45,7 @@ export default {
       email: "",
       password: "",
     },
+    userError: null,
     passRules: [
       (v) => !!v || "Password is required",
       (v) => v.length <= 10 || "Password must be less than 10 characters",
@@ -59,10 +63,10 @@ export default {
           localStorage.setItem("token", response.data.data.token);
           localStorage.setItem("info", JSON.stringify(response.data.data));
           localStorage.setItem("loggedIn", "true");
-          this.$router.push({ name: "/" });
+          this.$router.push("/");
         });
       } catch (e) {
-        if (e.data.type == "error") {
+        if (e.data.errors) {
           this.userError = "برجاء التاكد من صحة بياناتك";
         } else {
           console.log(e.data);

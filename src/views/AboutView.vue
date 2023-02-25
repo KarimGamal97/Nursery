@@ -138,7 +138,6 @@ export default {
   },
 };
 </script>
-FooterComp
 
 <style scoped>
 .about-header {

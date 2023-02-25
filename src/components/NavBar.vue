@@ -62,15 +62,24 @@
 </template>
 
 <script>
+import http from "axios";
 export default {
   name: "NavBar",
   data() {
     return {
       items: [
         { title: "بروفايل", path: "/profile" },
-        { title: "تسجيل الخروج" },
+        { title: "تسجيل الخروج", path: "/login" },
       ],
     };
+  },
+  methods: {
+    async logOut() {
+      await http.post("user/logout").then(() => {
+        localStorage.removeItem("token");
+        this.$router.push("/login");
+      });
+    },
   },
 };
 </script>

@@ -6,7 +6,10 @@ import ContactView from "../views/ContactView.vue";
 import InstructionsView from "../views/InstructionsView.vue";
 import FaqView from "../views/FaqView.vue";
 import LoginView from "@/views/LoginView";
+import LoginAd from "@/views/LoginAd.vue";
+import DashView from "@/views/admin/DashView";
 import ProfileView from "@/views/ProfileView.vue";
+import SignUpForm from "@/views/SignUpForm.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -41,9 +44,24 @@ const routes = [
     component: LoginView,
   },
   {
+    path: "/login-admin",
+    name: "loginAdmin",
+    component: LoginAd,
+  },
+  {
     path: "/profile",
     name: "profile",
     component: ProfileView,
+  },
+  {
+    path: "/admin",
+    name: "admin",
+    component: DashView,
+  },
+  {
+    path: "/SignUpForm",
+    name: "SignUpForm",
+    component: SignUpForm,
   },
 ];
 
