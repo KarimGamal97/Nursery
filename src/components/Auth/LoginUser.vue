@@ -60,14 +60,14 @@ export default {
     async submitLogin() {
       try {
         await http.post("user/login", this.Form).then((response) => {
-          localStorage.setItem("token", response.data.data.token)
+          localStorage.setItem("token", response.data.data.token);
           localStorage.setItem("info", JSON.stringify(response.data.data));
           localStorage.setItem("loggedIn", "true");
           this.$router.push("/");
         });
       } catch (e) {
         if (e.data.errors) {
-          this.userError = "برجاء التاكد من صحة بياناتك";
+          this.userError = "برجاء التأكد من صحة بياناتك";
         } else {
           console.log(e.data);
         }

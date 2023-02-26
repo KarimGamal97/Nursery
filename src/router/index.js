@@ -10,6 +10,8 @@ import LoginAd from "@/views/LoginAd.vue";
 import DashView from "@/views/admin/DashView";
 import ProfileView from "@/views/ProfileView.vue";
 import SignUpForm from "@/views/SignUpForm.vue";
+import TableAdmin from "@/views/admin/TableAdmin.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -17,26 +19,56 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) {
+        next("/login");
+      }
+      next();
+    },
   },
   {
     path: "/about",
     name: "about",
     component: AboutView,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) {
+        next("/login");
+      }
+      next();
+    },
   },
   {
     path: "/instructions",
     name: "instructions",
     component: InstructionsView,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) {
+        next("/login");
+      }
+      next();
+    },
   },
   {
     path: "/contact",
     name: "contact",
     component: ContactView,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) {
+        next("/login");
+      }
+      next();
+    },
   },
   {
     path: "/faq",
     name: "faq",
     component: FaqView,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) {
+        next("/login");
+      }
+      next();
+    },
   },
   {
     path: "/login",
@@ -52,16 +84,33 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: ProfileView,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) {
+        next("/login");
+      }
+      next();
+    },
   },
   {
     path: "/admin",
     name: "admin",
     component: DashView,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.token) {
+        next("/login");
+      }
+      next();
+    },
   },
   {
     path: "/SignUpForm",
     name: "SignUpForm",
     component: SignUpForm,
+  },
+  {
+    path: "/TableAdmin",
+    name: "TableAdmin",
+    component: TableAdmin,
   },
 ];
 
