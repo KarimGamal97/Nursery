@@ -65,38 +65,37 @@
               </v-btn>
             </v-toolbar>
             <v-row>
-              <v-card-tex style="display: flex; justify-content: space-around">
+              <v-card-text style="display: flex; justify-content: space-around">
                 <v-col md="5" sm="12">
                   <v-text-field
                     :disabled="!isEditing"
                     color="white"
-                    label="الاسم"
+                    label="اسم المستخدم"
+                    reverse
+                    v-model="userData.name"
                   ></v-text-field>
                 </v-col>
                 <v-col md="5" sm="12">
                   <v-text-field
                     :disabled="!isEditing"
                     color="white"
-                    label="العنوان"
+                    label="البريد الالكتروني "
+                    reverse
+                    v-model="userData.email"
                   ></v-text-field>
                 </v-col>
-              </v-card-tex>
-              <v-card-tex style="display: flex; justify-content: space-around">
+              </v-card-text>
+              <v-card-text style="display: flex; justify-content: space-around">
                 <v-col md="5" sm="12">
                   <v-text-field
                     :disabled="!isEditing"
                     color="white"
                     label="رقم الهاتف"
+                    reverse
+                    v-model="userData.phone"
                   ></v-text-field>
                 </v-col>
-                <v-col md="5" sm="12">
-                  <v-text-field
-                    :disabled="!isEditing"
-                    color="white"
-                    label="كلمة المرور"
-                  ></v-text-field>
-                </v-col>
-              </v-card-tex>
+              </v-card-text>
             </v-row>
             <v-divider></v-divider>
             <v-card-actions>
@@ -131,13 +130,6 @@ export default {
       hasSaved: false,
       isEditing: null,
       model: null,
-      states: [
-        { name: "Florida", abbr: "FL", id: 1 },
-        { name: "Georgia", abbr: "GA", id: 2 },
-        { name: "Nebraska", abbr: "NE", id: 3 },
-        { name: "California", abbr: "CA", id: 4 },
-        { name: "New York", abbr: "NY", id: 5 },
-      ],
     };
   },
   methods: {
@@ -154,22 +146,10 @@ export default {
       this.isEditing = !this.isEditing;
       this.hasSaved = true;
     },
-    changeAvatar() {
-      const input = document.createElement("input");
-      let self = this;
-      input.setAttribute("type", "file");
-      input.addEventListener("change", function () {
-        if (this.files && this.files[0]) {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-            self.user_credentials.avatar = e.target.result;
-          };
-          reader.readAsDataURL(this.files[0]);
-          console.log("this is redader" + reader);
-        }
-      });
-      input.click();
-      return false;
+  },
+  computed: {
+    userData() {
+      return this.$store.getters.userInfo;
     },
   },
 };

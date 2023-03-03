@@ -6,6 +6,7 @@ const http = axios.create({
   baseURL: domain,
   headers: {
     "Content-Type": "application/json",
+
     Accept: "application/json",
   },
 });
