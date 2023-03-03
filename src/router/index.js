@@ -11,6 +11,7 @@ import DashView from "@/views/admin/DashView";
 import ProfileView from "@/views/ProfileView.vue";
 import SignUpForm from "@/views/SignUpForm.vue";
 import TableAdmin from "@/views/admin/TableAdmin.vue";
+import FaqAdminView from "@/views/FaqAdminView.vue";
 
 Vue.use(VueRouter);
 
@@ -111,6 +112,11 @@ const routes = [
     path: "/TableAdmin",
     name: "TableAdmin",
     component: TableAdmin,
+  },
+  {
+    path: "/faq-admin",
+    name: "FaqAdmin",
+    component: FaqAdminView,
   },
 ];
 

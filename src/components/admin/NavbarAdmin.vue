@@ -16,13 +16,13 @@
 
       <v-spacer></v-spacer>
 
-      <router-link class="nav-link navbar-link" to="/"
+      <router-link class="nav-link navbar-link" to="/admin"
         >الصفحة الرئيسية</router-link
       >
-      <router-link class="nav-link navbar-link" to="/instructions"
+      <router-link class="nav-link navbar-link" to="/TableAdmin"
         >تعليمات</router-link
       >
-      <router-link class="nav-link navbar-link" to="/faq"
+      <router-link class="nav-link navbar-link" to="/faq-admin"
         >شكاوي و مقترحات</router-link
       >
       <div class="text-center">
@@ -63,8 +63,7 @@ export default {
     return {
       items: [
         { title: "بروفايل", path: "/profile" },
-        { title: "أدمن", path: "/TableAdmin" },
-        { title: "تسجيل الخروج", path: "/login" },
+        { title: "تسجيل الخروج", path: "/login-admin" },
       ],
     };
   },
@@ -72,7 +71,7 @@ export default {
     async logOut() {
       await http.post("user/logout").then(() => {
         localStorage.removeItem("token");
-        this.$router.push("/login");
+        this.$router.push("/login-admin");
       });
     },
   },

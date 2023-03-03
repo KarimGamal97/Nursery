@@ -6,9 +6,8 @@
 
 <script>
 import NavbarAdmin from "./NavbarAdmin.vue";
-
 export default {
-  name: "DashBoard",
+  name: "FaqAdmin",
   components: {
     NavbarAdmin,
   },

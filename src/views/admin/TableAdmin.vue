@@ -1,7 +1,48 @@
 <template>
   <div>
     <navbar-admin></navbar-admin>
-    <b-table :fields="fields" :items="items"></b-table>
+    <!-- Start PopUp -->
+    <div>
+      <div class="d-flex justify-content-end p-2">
+        <b-button v-b-modal.modal-prevent-closing>اضافة تعليمات</b-button>
+      </div>
+      <b-modal
+        id="modal-prevent-closing"
+        ref="modal"
+        title="اضافة تعليمات جديدة"
+        hide-footer
+      >
+        <form ref="form" @submit.stop.prevent="handleSubmit">
+          <b-form-group
+            label="المحتوي"
+            label-for="name-input"
+            invalid-feedback="Name is required"
+          >
+            <b-form-input
+              id="name-input"
+              v-model="form.instruction"
+              required
+            ></b-form-input>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-primary mt-3" @click="addItem">
+                اضافة
+              </button>
+            </div>
+          </b-form-group>
+        </form>
+      </b-modal>
+    </div>
+    <!-- End PopUp -->
+    <b-table :items="items" :fields="fields" bordered>
+      <template #cell(Settings)="data">
+        <div class="d-flex justify-content-sm-evenly">
+          <button class="btn btn-warning" @click="editData(data)">تعديل</button>
+          <button class="btn btn-danger" @click="deleteData(data.index, data)">
+            حذف
+          </button>
+        </div>
+      </template>
+    </b-table>
     <footer-comp></footer-comp>
   </div>
 </template>
@@ -20,27 +61,57 @@ export default {
     return {
       fields: [
         {
-          key: "body",
+          key: "instruction",
           label: "تعليمات ",
           thStyle: {
             background: "#367db5",
             color: "#fff",
             border: "1px solid",
+            textAlign: "center",
+          },
+        },
+        {
+          key: "Settings",
+          label: "الاعدادات",
+          thStyle: {
+            background: "#367db5",
+            color: "#fff",
+            border: "1px solid",
+            textAlign: "center",
           },
         },
       ],
       items: [],
+      form: {
+        instruction: "",
+      },
     };
   },
   methods: {
     async getData() {
       try {
         await http.get("admin/inetructions").then((res) => {
-          this.items.push(res.data.data);
+          this.items = res.data.data;
         });
       } catch (e) {
         console.log(e);
       }
+    },
+    editData(data) {
+      console.log(data);
+    },
+    deleteData(index, data) {
+      http.delete(`admin/inetructions/${data.item.id}`).then(() => {
+        this.items.splice(index, 1);
+        console.log(data);
+      });
+    },
+    addItem() {
+      http.post("admin/inetructions", this.form).then((response) => {
+        this.items.push(response.data.data);
+        this.form = {};
+        this.$bvModal.hide("modal-prevent-closing");
+      });
     },
   },
   mounted() {
