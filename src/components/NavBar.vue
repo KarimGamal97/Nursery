@@ -68,7 +68,7 @@
 </template>
 
 <script>
-// import http from "axios";
+import http from "@/axios";
 export default {
   name: "NavBar",
   data() {
@@ -82,12 +82,10 @@ export default {
   },
   methods: {
     async logout() {
-      await this.$router.push({ name: "login" });
-      // await http.post("api/user/logout").then(() => {
-      //   this.$router.push({ name: "login" });
-      //   localStorage.clear();
-        
-      // });
+      await http.post("user/logout").then(() => {
+        this.$router.push({ name: "login" });
+        localStorage.clear();
+      });
     },
   },
 };

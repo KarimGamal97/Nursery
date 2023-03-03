@@ -1,5 +1,6 @@
 <template>
   <div style="margin: 200px auto">
+    <v-card class="p-2">
     <h2 class="text-center">تسجيل الدخول</h2>
     <v-form @submit.prevent="submitLogin" v-model="valid">
       <v-container>
@@ -20,6 +21,7 @@
                 :rules="passRules"
                 placeholder="كلمة المرور"
                 required
+                type="password"
                 outlined
               ></v-text-field>
               <p>{{ userError }}</p>
@@ -31,6 +33,7 @@
         </v-row>
       </v-container>
     </v-form>
+  </v-card>
   </div>
 </template>
 <script>

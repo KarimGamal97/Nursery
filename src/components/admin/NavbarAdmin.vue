@@ -40,14 +40,10 @@
               <v-icon>mdi-account</v-icon>
             </v-btn>
           </template>
-          <v-list>
-            <v-list-item
-              v-for="(item, index) in items"
-              :key="index"
-              :to="item.path"
-            >
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item>
+          <v-list  style="width: 150px; padding: 10px;">
+            <button @click="logout" style="padding: 10px;">
+               تسجيل الخروج
+              </button>
           </v-list>
         </v-menu>
       </div>
@@ -56,21 +52,14 @@
 </template>
 
 <script>
-import http from "axios";
+import http from "@/axios";
 export default {
   name: "NavBar",
-  data() {
-    return {
-      items: [
-        { title: "بروفايل", path: "/profile" },
-        { title: "تسجيل الخروج", path: "/login-admin" },
-      ],
-    };
-  },
+  
   methods: {
-    async logOut() {
-      await http.post("user/logout").then(() => {
-        localStorage.removeItem("token");
+    async logout() {
+      await http.post("admin/logout").then(() => {
+        localStorage.clear();
         this.$router.push("/login-admin");
       });
     },
