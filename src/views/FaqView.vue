@@ -6,6 +6,8 @@
     </v-container>
     <v-container style="height: 60vh">
       <h1 class="contact-head">برجاء كتابة شكوي أو اقتراح</h1>
+      <v-card>
+
       <v-textarea
         name="input-7-1"
         filled
@@ -24,6 +26,7 @@
           ارسال
         </v-btn>
       </div>
+    </v-card>
     </v-container>
     <footer-comp></footer-comp>
   </div>

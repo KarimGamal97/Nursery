@@ -83,6 +83,20 @@
                     reverse
                     v-model="userData.email"
                   ></v-text-field>
+                  <v-text-field
+                    :disabled="!isEditing"
+                    color="white"
+                    label="السن"
+                    value="5"
+                    reverse
+                  ></v-text-field>
+                  <v-text-field
+                    :disabled="!isEditing"
+                    color="white"
+                    label="العنوان"
+                    value="القاهره"
+                    reverse
+                  ></v-text-field>
                 </v-col>
               </v-card-text>
               <v-card-text style="display: flex; justify-content: space-around">

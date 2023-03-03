@@ -1,10 +1,10 @@
 <template>
   <div style="margin: 200px auto">
+    <v-card class="p-2">
     <h2 class="text-center">تسجيل الدخول</h2>
     <v-form @submit.prevent="submitLogin" v-model="valid">
       <v-container>
         <v-row>
-          <div>
             <v-col cols="12" md="12">
               <v-text-field
                 v-model="Form.email"
@@ -21,6 +21,7 @@
                 placeholder="كلمة المرور"
                 required
                 outlined
+                type="password"
               ></v-text-field>
               <p>{{ userError }}</p>
             </v-col>
@@ -30,10 +31,10 @@
                 <router-link to="/SignUpForm">انشاء حساب جديد</router-link>
               </div>
             </v-col>
-          </div>
         </v-row>
-      </v-container>
+        </v-container>
     </v-form>
+    </v-card>
   </div>
 </template>
 <script>
@@ -62,8 +63,8 @@ export default {
         await http.post("user/login", this.Form).then((response) => {
           localStorage.setItem("token", response.data.data.token);
           localStorage.setItem("info", JSON.stringify(response.data.data));
-          localStorage.setItem("loggedIn", "true");
           this.$router.push("/");
+          console.log(response.data.data)
         });
       } catch (e) {
         if (e.data.errors) {

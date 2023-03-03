@@ -1,5 +1,6 @@
 <template>
   <form class="sign-up" @submit.prevent="signUp">
+    <v-card class="p-2">
     <h3
       class="text-center"
       style="color: blue; font-size: 30px; margin-bottom: 20px"
@@ -61,6 +62,7 @@
         <button type="submit" class="btn btn-warning">انشاء حساب</button>
       </div>
     </div>
+  </v-card>
   </form>
 </template>
 

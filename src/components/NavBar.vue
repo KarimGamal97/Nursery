@@ -25,6 +25,9 @@
       <router-link class="nav-link navbar-link" to="/instructions"
         >تعليمات</router-link
       >
+      <router-link class="nav-link navbar-link" to="/directions"
+        >ارشادات</router-link
+      >
       <router-link class="nav-link navbar-link" to="/faq"
         >شكاوي و مقترحات</router-link
       >
@@ -46,7 +49,7 @@
               <v-icon>mdi-account</v-icon>
             </v-btn>
           </template>
-          <v-list>
+          <v-list style="width: 150px; padding: 10px;">
             <v-list-item
               v-for="(item, index) in items"
               :key="index"
@@ -54,6 +57,9 @@
             >
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
+            <button @click="logout" style="padding: 10px;">
+               تسجيل الخروج
+              </button>
           </v-list>
         </v-menu>
       </div>
@@ -62,24 +68,26 @@
 </template>
 
 <script>
-import http from "axios";
+// import http from "axios";
 export default {
   name: "NavBar",
   data() {
     return {
       items: [
         { title: "بروفايل", path: "/profile" },
-        { title: "أدمن", path: "/TableAdmin" },
-        { title: "تسجيل الخروج", path: "/login" },
+        { title: "أدمن", path: "/login-admin" },
+        
       ],
     };
   },
   methods: {
-    async logOut() {
-      await http.post("user/logout").then(() => {
-        localStorage.removeItem("token");
-        this.$router.push("/login");
-      });
+    async logout() {
+      await this.$router.push({ name: "login" });
+      // await http.post("api/user/logout").then(() => {
+      //   this.$router.push({ name: "login" });
+      //   localStorage.clear();
+        
+      // });
     },
   },
 };

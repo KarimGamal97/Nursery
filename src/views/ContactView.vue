@@ -5,9 +5,12 @@
       <img class="contact-img" src="../assets/contact_2.jpg" />
     </v-container>
     <v-container>
-      <h1 class="contact-head">تواصل معنا</h1>
-      <p style="text-align: center; font-size: 16px; font-weight: bold">
-        نحن دائما في خدمتك أنت و طفلك
+      <v-card>
+      <h1 class="contact-head p-2">تواصل معنا</h1>
+      <p style="text-align: center; font-size: 20px; font-weight: bold; padding: 25px;">
+        إننا نرى أن أهم شيء في . حضانتنا هو أنها مكان آمن. ومحبوب، ومكان لرعاية أطفالنا وعائلاتهم، حيث أننا نحرص كل الحرص على ضمان اطلاع الأولياء على سياساتنا وإجراءاتنا في حضانة علم طفلك وهذه السياسات والإجراءات مقدمة لكم بالتفصيل في دليل الأولياء.
+
+إن كان لديكم أي أسئلة تتعلق بنا، فلا تترددوا في الاتصال بنا.
       </p>
       <v-form class="form" ref="form" v-model="valid" lazy-validation>
         <v-text-field
@@ -16,36 +19,46 @@
           :rules="nameRules"
           label="الاسم"
           required
+          reverse
+          outlined
         ></v-text-field>
         <v-text-field
           v-model="email"
           :rules="emailRules"
           label="البريد الالكتروني"
           required
+          reverse
+          outlined
         ></v-text-field>
         <v-text-field
           v-model="address"
-          :rules="addressRules"
+          
           label="العنوان"
           required
+          reverse
+          outlined
         ></v-text-field>
         <v-text-field
           v-model="phone"
-          :rules="phonesRules"
+          
           label="رقم الهاتف"
           required
+          reverse
+          outlined
         ></v-text-field>
         <v-textarea
           name="input-7-1"
           filled
-          label=""
+          outlined
+          reverse
           auto-grow
-          value="اكتب رسالتك الخاصة هنا"
+          placeholder="اكتب رسالتك الخاصة هنا"
         ></v-textarea>
         <div style="text-align: right">
           <v-btn class="ma-2" color="success"> ارسال </v-btn>
         </div>
       </v-form>
+    </v-card>
     </v-container>
     <footer-comp></footer-comp>
   </div>
@@ -70,6 +83,8 @@ export default {
         (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
       ],
       email: "",
+      phone:"",
+      address:"",
       emailRules: [
         (v) => !!v || "E-mail is required",
         (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",

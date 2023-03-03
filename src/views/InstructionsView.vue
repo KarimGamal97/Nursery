@@ -4,11 +4,17 @@
     <v-container>
       <img class="instructions-img" src="../assets/instructions.jpg" />
     </v-container>
-    <v-container>
-      <h2 class="contact-head">
-        يرجي الالتزام بقوانين اللائحة للحفاظ علي طفلك :
+    <v-container style="margin:auto; width: 50%;">
+      <h2 class="contact-head text">
+        يرجي الالتزام بقوانين اللائحة للحفاظ علي طفلك 
       </h2>
-      <b-table :items="items" :fields="fields"></b-table>
+      <b-table :items="items" :fields="fields" bordered>
+      <template #cell(instruction)="data">
+        <div class="text">
+        <p>{{data.item.instruction}}</p>
+        </div>
+      </template>
+      </b-table>
     </v-container>
     <footer-comp></footer-comp>
   </div>
@@ -77,4 +83,13 @@ ul li {
   font-size: 18px;
   font-weight: 500;
 }
+.text{
+  background: #fff;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 </style>

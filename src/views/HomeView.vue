@@ -8,26 +8,38 @@
         :src="item.src"
       ></v-carousel-item>
     </v-carousel>
-    <v-container class="grey lighten-5">
+    <v-container fluid class="grey lighten-5">
       <v-row>
-        <v-col cols="12" lg="6" sm="12" md="6">
-          <img src="../assets/Depositphotos_12359307_original.jpg" />
+        <v-col cols="12" lg="12" sm="12" md="12" class="m-auto">
+          <img src="../assets/Dep.jpg" />
         </v-col>
-        <v-col cols="12" lg="6" sm="12" md="6">
+        <v-col cols="12" lg="12" sm="12" md="12" class="m-auto">
           <div class="box">
             <h2>علم طفلك</h2>
             <p>
-              "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
-              دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
-              يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو
-              لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات . ديواس أيوتي
-              أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي كايلليوم
-              دولار أيو فيجايت نيولا باراياتيور. أيكسسيبتيور ساينت أوككايكات
-              كيوبايداتات نون بروايدينت ,سيونت ان كيولبا كيو أوفيسيا
-              ديسيريونتموليت انيم أيدي ايست لابوريوم."
+              "مرحباً "إنه لشرف عظيم لنا في أن نعرف كل طفل على حدة ونعمل على
+              مساعدتهم للوصول إلى أقصى إمكاناتهم" الآباء الأولياء هم شركاؤنا،
+              لذا يساعدنا التواصل المستمر معهم على تلبية الاحتياجات الاجتماعية
+              والبدنية، والعاطفية لجميع الأطفال." ترحب حضانة علم طفلك بصدر رحب
+              بالأولياء وتتطلع لأن تكونوا جزءًا مشاركا فيما يتعلق بنمو أطفالكم
+              نموهم العقلي والعاطفي، والبدني والاجتماعي. ولهذا السبب فإننا نركز
+              على العمل مع الأولياء لمعرفة المزيد عن شخصية أطفالهم. الحضانة
+              مفتوحة من الأحد إلى الخميس من الساعة 6:00 صباحاً وحتى 3:00 مساءً،
+              بالإضافة إلى ساعات إضافية من الساعة 3:00 مساءً وحتى 5:00 مساءً.
+              يرجى الاطلاع على معلوماتنا التفصيلية بخصوص ما يلزم إحضاره إلى
+              الحضانة لكي نجعل الاستقرار عند انتقال طفلكم أمراً سلسا بقدر
+              الإمكان."
             </p>
             <button>المزيد ..</button>
           </div>
+        </v-col>
+        <v-col cols="12" lg="12" sm="12" md="12" class="m-auto">
+          <video
+            poster="../assets/t3.jpeg"
+            class="p-5"
+            src="../assets/Video.mp4"
+            controls
+          ></video>
         </v-col>
       </v-row>
     </v-container>
@@ -65,7 +77,19 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+main,
+.v-main {
+  background-image: url("../assets/t1.jpeg");
+  background-size: cover;
+  width: 100%;
+}
+.our-team {
+  background-image: url("../assets/t2.jpeg");
+  background-size: cover;
+  width: 100%;
+}
+video,
 img {
   max-width: 100%;
 }
@@ -80,6 +104,7 @@ img {
     line-height: 2;
     text-align: center;
     color: #333;
+    font-size:30px;
   }
   button {
     background: #0d6efd;
@@ -89,5 +114,8 @@ img {
     display: block;
     margin: auto;
   }
+}
+td{
+  padding: 0  !important;
 }
 </style>

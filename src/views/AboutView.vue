@@ -29,10 +29,10 @@
     <div class="our-team">
       <h1 class="head-team">فريقنا</h1>
       <v-container>
-        <v-row>
+        <v-row >
           <!-- Start Card -->
           <v-col style="padding-bottom: 1%" cols="12" lg="3" sm="6" md="3">
-            <v-card max-width="350">
+            <v-card max-width="350" dark>
               <v-img
                 src="../assets/stuff-1-370x370.jpg"
                 style="background-size: contain"
@@ -53,7 +53,7 @@
           <!-- End Card -->
           <!-- Start Card -->
           <v-col style="padding-bottom: 1%" cols="12" lg="3" sm="6" md="3">
-            <v-card max-width="350">
+            <v-card max-width="350" dark>
               <v-img
                 src="../assets/stuff-2-370x370.jpg"
                 style="background-size: contain"
@@ -74,7 +74,7 @@
           <!-- End Card -->
           <!-- Start Card -->
           <v-col style="padding-bottom: 1%" cols="12" lg="3" sm="6" md="3">
-            <v-card max-width="350">
+            <v-card max-width="350" dark>
               <v-img
                 src="../assets/stuff-4-370x370.jpg"
                 style="background-size: contain"
@@ -97,7 +97,7 @@
           <!-- End Card -->
           <!-- Start Card -->
           <v-col style="padding-bottom: 1%" cols="12" lg="3" sm="6" md="3">
-            <v-card max-width="350">
+            <v-card max-width="350" dark>
               <v-img
                 src="../assets/stuff-3-370x370.jpg"
                 style="background-size: contain"
