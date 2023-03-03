@@ -55,7 +55,7 @@ export default {
   methods: {
     async submitLogin() {
       try {
-        await http.post("user/login", this.Form).then((response) => {
+        await http.post("user/login", this.Form).then(response => {
           localStorage.setItem("token", response.data.data.token)
           localStorage.setItem("info", JSON.stringify(response.data.data));
           localStorage.setItem("loggedIn", "true");
