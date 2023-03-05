@@ -22,6 +22,9 @@
       <router-link class="nav-link navbar-link" to="/TableAdmin"
         >تعليمات</router-link
       >
+      <router-link class="nav-link navbar-link" to="/guidances"
+        >ارشادات</router-link
+      >
       <router-link class="nav-link navbar-link" to="/faq-admin"
         >شكاوي و مقترحات</router-link
       >
@@ -40,10 +43,8 @@
               <v-icon>mdi-account</v-icon>
             </v-btn>
           </template>
-          <v-list  style="width: 150px; padding: 10px;">
-            <button @click="logout" style="padding: 10px;">
-               تسجيل الخروج
-              </button>
+          <v-list style="width: 150px; padding: 10px">
+            <button @click="logout" style="padding: 10px">تسجيل الخروج</button>
           </v-list>
         </v-menu>
       </div>
@@ -55,7 +56,7 @@
 import http from "@/axios";
 export default {
   name: "NavBar",
-  
+
   methods: {
     async logout() {
       await http.post("admin/logout").then(() => {

@@ -29,7 +29,7 @@
     <div class="our-team">
       <h1 class="head-team">فريقنا</h1>
       <v-container>
-        <v-row >
+        <v-row>
           <!-- Start Card -->
           <v-col style="padding-bottom: 1%" cols="12" lg="3" sm="6" md="3">
             <v-card max-width="350" dark>

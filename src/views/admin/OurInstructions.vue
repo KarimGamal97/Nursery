@@ -20,7 +20,7 @@
           >
             <b-form-input
               id="name-input"
-              v-model="form.instruction"
+              v-model="form.guidance"
               required
             ></b-form-input>
             <div class="d-flex justify-content-end">
@@ -36,16 +36,13 @@
     <b-table :items="items" :fields="fields" bordered>
       <template #cell(Settings)="data">
         <div class="d-flex justify-content-sm-evenly">
-          <button class="btn btn-warning" @click="editData(data.item)">
-            تعديل
-          </button>
+          <button class="btn btn-warning" @click="editData(data)">تعديل</button>
           <button class="btn btn-danger" @click="deleteData(data.index, data)">
             حذف
           </button>
         </div>
       </template>
     </b-table>
-    <edit-popup :itemAll="items" :obj="obj"></edit-popup>
     <footer-comp></footer-comp>
   </div>
 </template>
@@ -54,19 +51,17 @@
 import http from "@/axios";
 import NavbarAdmin from "@/components/admin/NavbarAdmin.vue";
 import FooterComp from "@/components/FooterComp.vue";
-import EditPopup from "@/components/Models/EditPopup.vue";
 export default {
-  name: "TableAdmin",
+  name: "OurInstructions",
   components: {
     FooterComp,
     NavbarAdmin,
-    EditPopup,
   },
   data() {
     return {
       fields: [
         {
-          key: "instruction",
+          key: "guidance",
           label: "تعليمات ",
           thStyle: {
             background: "#367db5",
@@ -87,17 +82,15 @@ export default {
         },
       ],
       items: [],
-      itemAll: [],
-      obj: {},
       form: {
-        instruction: "",
+        guidance: "",
       },
     };
   },
   methods: {
     async getData() {
       try {
-        await http.get("admin/inetructions").then((res) => {
+        await http.get("admin/guidances").then((res) => {
           this.items = res.data.data;
         });
       } catch (e) {
@@ -105,19 +98,16 @@ export default {
       }
     },
     editData(data) {
-      this.$bvModal.show("edit-modal");
-      this.obj = data;
-      this.itemAll = data.item;
-      console.log(this.itemAll);
+      console.log(data);
     },
     deleteData(index, data) {
-      http.delete(`admin/inetructions/${data.item.id}`).then(() => {
+      http.delete(`admin/guidances/${data.item.id}`).then(() => {
         this.items.splice(index, 1);
         console.log(data);
       });
     },
     addItem() {
-      http.post("admin/inetructions", this.form).then((response) => {
+      http.post("admin/guidances", this.form).then((response) => {
         this.items.push(response.data.data);
         this.form = {};
         this.$bvModal.hide("modal-prevent-closing");

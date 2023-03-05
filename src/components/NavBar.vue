@@ -49,7 +49,7 @@
               <v-icon>mdi-account</v-icon>
             </v-btn>
           </template>
-          <v-list style="width: 150px; padding: 10px;">
+          <v-list style="width: 150px; padding: 10px">
             <v-list-item
               v-for="(item, index) in items"
               :key="index"
@@ -57,9 +57,7 @@
             >
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
-            <button @click="logout" style="padding: 10px;">
-               تسجيل الخروج
-              </button>
+            <button @click="logout" style="padding: 10px">تسجيل الخروج</button>
           </v-list>
         </v-menu>
       </div>
@@ -76,7 +74,6 @@ export default {
       items: [
         { title: "بروفايل", path: "/profile" },
         { title: "أدمن", path: "/login-admin" },
-        
       ],
     };
   },

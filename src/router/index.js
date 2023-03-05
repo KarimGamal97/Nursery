@@ -13,6 +13,7 @@ import SignUpForm from "@/views/SignUpForm.vue";
 import TableAdmin from "@/views/admin/TableAdmin.vue";
 import FaqAdminView from "@/views/FaqAdminView.vue";
 import DirectionsView from "@/views/directionsView.vue";
+import OurInstructions from "@/views/admin/OurInstructions.vue";
 
 Vue.use(VueRouter);
 
@@ -21,31 +22,26 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
-    
   },
   {
     path: "/about",
     name: "about",
     component: AboutView,
-    
   },
   {
     path: "/instructions",
     name: "instructions",
     component: InstructionsView,
-    
   },
   {
     path: "/contact",
     name: "contact",
     component: ContactView,
-    
   },
   {
     path: "/faq",
     name: "faq",
     component: FaqView,
-    
   },
   {
     path: "/login",
@@ -61,7 +57,6 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: ProfileView,
-    
   },
   {
     path: "/admin",
@@ -72,25 +67,26 @@ const routes = [
     path: "/SignUpForm",
     name: "SignUpForm",
     component: SignUpForm,
-
   },
   {
     path: "/TableAdmin",
     name: "TableAdmin",
     component: TableAdmin,
-    
   },
   {
     path: "/faq-admin",
     name: "FaqAdmin",
     component: FaqAdminView,
-    
   },
   {
     path: "/directions",
     name: "directionsView",
     component: DirectionsView,
-    
+  },
+  {
+    path: "/guidances",
+    name: "OurInstructions",
+    component: OurInstructions,
   },
 ];
 
