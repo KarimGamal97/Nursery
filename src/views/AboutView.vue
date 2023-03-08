@@ -26,6 +26,35 @@
         </v-row>
       </v-container>
     </div>
+    <v-continer>
+      <v-row>
+        <v-col lg="4" md="6" sm="12" class="m-auto">
+          <img src="../assets/98d5b2f3-ad68-4d8b-82cf-7c83a55fe1d9.jpg" class="img-fluid">
+        </v-col>
+        <v-col lg="4" md="6" sm="12" class="m-auto">
+          <img src="../assets/af93a7c5-4140-45d3-9657-a1b0b1a99a1e.jpg" class="img-fluid">
+        </v-col>
+        <v-col lg="4" md="6" sm="12" class="m-auto">
+          <img src="../assets/f06c0c57-62ac-46fd-bb71-18d07bb79de1.jpg" class="img-fluid">
+        </v-col>
+        <v-col lg="4" md="6" sm="12" class="m-auto">
+          <img src="../assets/df443ea4-3eb4-4756-ad4e-fe410b7f7ece.jpg" class="img-fluid">
+        </v-col>
+        <v-col lg="4" md="6" sm="12" class="m-auto">
+          <img src="../assets/cd9a46bc-9ca0-4401-a493-2fdbcadb8aad.jpg" class="img-fluid">
+        </v-col>
+        <v-col lg="4" md="6" sm="12" class="m-auto">
+          <img src="../assets/9cfd47cc-7c93-40e7-bf8d-a812e610b9ad.jpg" class="img-fluid">
+        </v-col>
+        <v-col lg="4" md="6" sm="12" class="m-auto">
+          <img src="../assets/28986d2a-d79f-460d-9763-9db7d20c48a7.jpg" class="img-fluid">
+        </v-col>
+        <v-col lg="4" md="6" sm="12" class="m-auto">
+          <img src="../assets/cf825aa5-49a3-44c4-889d-1ed8da46ac7d.jpg" class="img-fluid">
+        </v-col>
+        
+      </v-row>
+    </v-continer>
     <div class="our-team">
       <h1 class="head-team">فريقنا</h1>
       <v-container>

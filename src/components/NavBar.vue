@@ -23,11 +23,11 @@
         >معلومات عنا</router-link
       >
       <router-link class="nav-link navbar-link" to="/instructions"
-        >تعليمات</router-link
+        > تعليمات و ارشادات</router-link
       >
-      <router-link class="nav-link navbar-link" to="/directions"
+      <!-- <router-link class="nav-link navbar-link" to="/directions"
         >ارشادات</router-link
-      >
+      > -->
       <router-link class="nav-link navbar-link" to="/faq"
         >شكاوي و مقترحات</router-link
       >

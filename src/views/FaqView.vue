@@ -4,7 +4,7 @@
     <v-container>
       <img class="contact-img" src="../assets/9435123826_a4c3b35c08_o.jpg" />
     </v-container>
-    <v-container style="height: 60vh">
+    <v-container style="height: 60vh; width: 50%;">
       <h1 class="contact-head">برجاء كتابة شكوي أو اقتراح</h1>
       <v-card>
 
@@ -19,7 +19,7 @@
       <div style="text-align: right">
         <v-btn
           class="ma-2"
-          color="success"
+          color="primary"
           @click="faqSend"
           :disabled="body.length < 5"
         >

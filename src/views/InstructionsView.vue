@@ -1,21 +1,28 @@
 <template>
   <div>
     <nav-bar></nav-bar>
-    <v-container>
-      <img class="instructions-img" src="../assets/instructions.jpg" />
-    </v-container>
-    <v-container style="margin:auto; width: 50%;">
-      <h2 class="contact-head text">
-        يرجي الالتزام بقوانين اللائحة للحفاظ علي طفلك 
-      </h2>
-      <b-table :items="items" :fields="fields" bordered>
-      <template #cell(instruction)="data">
-        <div class="text">
-        <p>{{data.item.instruction}}</p>
-        </div>
-      </template>
-      </b-table>
-    </v-container>
+    <b-tabs content-class="mt-3">
+    <b-tab title="تعليمات" active>
+      <v-container>
+        <img class="instructions-img" src="../assets/instructions.jpg" />
+      </v-container>
+      <v-container style="margin:auto; width: 50%;">
+        <h2 class="contact-head text">
+          يرجي الالتزام بقوانين اللائحة للحفاظ علي طفلك 
+        </h2>
+        <b-table :items="items" :fields="fields" bordered>
+        <template #cell(instruction)="data">
+          <div class="text">
+          <p>{{data.item.instruction}}</p>
+          </div>
+        </template>
+        </b-table>
+      </v-container>
+    </b-tab>
+    <b-tab title="ارشادات">
+      <directions-view></directions-view>
+    </b-tab>
+  </b-tabs>
     <footer-comp></footer-comp>
   </div>
 </template>
@@ -24,11 +31,13 @@
 import http from "@/axios";
 import NavBar from "@/components/NavBar.vue";
 import FooterComp from "@/components/FooterComp.vue";
+import DirectionsView from "@/views/directionsView.vue";
 export default {
   name: "InstructionsView",
   components: {
     NavBar,
     FooterComp,
+    DirectionsView,
   },
   data() {
     return {
@@ -91,5 +100,7 @@ ul li {
     font-size: 20px;
     font-weight: bold;
 }
-
+.nav-tabs{
+  background:#212529;
+}
 </style>

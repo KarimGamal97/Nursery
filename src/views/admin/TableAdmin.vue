@@ -12,7 +12,7 @@
         title="اضافة تعليمات جديدة"
         hide-footer
       >
-        <form ref="form" @submit.stop.prevent="handleSubmit">
+        <form ref="form" @submit.prevent>
           <b-form-group
             label="المحتوي"
             label-for="name-input"

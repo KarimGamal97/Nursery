@@ -55,7 +55,7 @@
           placeholder="اكتب رسالتك الخاصة هنا"
         ></v-textarea>
         <div style="text-align: right">
-          <v-btn class="ma-2" color="success"> ارسال </v-btn>
+          <v-btn class="ma-2" color="primary"> ارسال </v-btn>
         </div>
       </v-form>
     </v-card>

@@ -1,6 +1,6 @@
 <template>
     <div>
-      <nav-bar></nav-bar>
+      <!-- <nav-bar></nav-bar> -->
       <v-container>
         <img class="instructions-img" src="../assets/t3.jpeg" />
       </v-container>
@@ -9,9 +9,9 @@
           يرجي الالتزام بقوانين اللائحة للحفاظ علي طفلك 
         </h2>
         <b-table :items="items" :fields="fields" bordered>
-        <template #cell(instruction)="data">
+        <template #cell(guidance)="data">
           <div class="text">
-          <p>{{data.item.instruction}}</p>
+          <p>{{data.item.guidance}}</p>
           </div>
         </template>
         </b-table>
@@ -22,12 +22,12 @@
   
   <script>
   import http from "@/axios";
-  import NavBar from "@/components/NavBar.vue";
+  // import NavBar from "@/components/NavBar.vue";
   import FooterComp from "@/components/FooterComp.vue";
   export default {
     name: "InstructionsView",
     components: {
-      NavBar,
+      // NavBar,
       FooterComp,
     },
     data() {
@@ -83,7 +83,7 @@
     font-size: 18px;
     font-weight: 500;
   }
-  .text{
+  .text , tbody{
     background: #fff;
       padding: 10px;
       margin: auto;

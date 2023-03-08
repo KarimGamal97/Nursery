@@ -5,14 +5,14 @@ import AboutView from "../views/AboutView.vue";
 import ContactView from "../views/ContactView.vue";
 import InstructionsView from "../views/InstructionsView.vue";
 import FaqView from "../views/FaqView.vue";
-import LoginView from "@/views/LoginView";
+// import LoginView from "@/views/LoginView";
 import LoginAd from "@/views/LoginAd.vue";
 import DashView from "@/views/admin/DashView";
 import ProfileView from "@/views/ProfileView.vue";
 import SignUpForm from "@/views/SignUpForm.vue";
 import TableAdmin from "@/views/admin/TableAdmin.vue";
 import FaqAdminView from "@/views/FaqAdminView.vue";
-import DirectionsView from "@/views/directionsView.vue";
+// import DirectionsView from "@/views/directionsView.vue";
 import OurInstructions from "@/views/admin/OurInstructions.vue";
 
 Vue.use(VueRouter);
@@ -43,11 +43,11 @@ const routes = [
     name: "faq",
     component: FaqView,
   },
-  {
-    path: "/login",
-    name: "login",
-    component: LoginView,
-  },
+  // {
+  //   path: "/login",
+  //   name: "login",
+  //   component: LoginView,
+  // },
   {
     path: "/login-admin",
     name: "loginAdmin",
@@ -78,11 +78,11 @@ const routes = [
     name: "FaqAdmin",
     component: FaqAdminView,
   },
-  {
-    path: "/directions",
-    name: "directionsView",
-    component: DirectionsView,
-  },
+  // {
+  //   path: "/directions",
+  //   name: "directionsView",
+  //   component: DirectionsView,
+  // },
   {
     path: "/guidances",
     name: "OurInstructions",
